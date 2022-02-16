@@ -1,0 +1,2 @@
+# sorum
+Exercises project
