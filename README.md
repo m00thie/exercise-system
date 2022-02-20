@@ -1,2 +1,2 @@
-# sorum
+# exercise-system
 Exercises project
