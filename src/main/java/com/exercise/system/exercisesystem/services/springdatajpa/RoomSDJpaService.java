@@ -3,7 +3,6 @@ package com.exercise.system.exercisesystem.services.springdatajpa;
 import com.exercise.system.exercisesystem.model.Room;
 import com.exercise.system.exercisesystem.repositories.RoomRepository;
 import com.exercise.system.exercisesystem.services.RoomService;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -11,7 +10,6 @@ import java.util.Set;
 import java.util.UUID;
 
 @Service
-@Profile("springdatajpa")
 public class RoomSDJpaService implements RoomService {
 
     private final RoomRepository roomRepository;
