@@ -3,6 +3,7 @@ package com.exercise.system.exercisesystem.services.springdatajpa;
 import com.exercise.system.exercisesystem.model.User;
 import com.exercise.system.exercisesystem.repositories.UserRepository;
 import com.exercise.system.exercisesystem.services.UserService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -11,6 +12,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @Service
+@Profile("springdatajpa")
 public class UserSDJpaService implements UserService {
     private final UserRepository userRepository;
 

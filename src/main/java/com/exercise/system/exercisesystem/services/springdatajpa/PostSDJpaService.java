@@ -3,6 +3,7 @@ package com.exercise.system.exercisesystem.services.springdatajpa;
 import com.exercise.system.exercisesystem.model.Post;
 import com.exercise.system.exercisesystem.repositories.PostRepository;
 import com.exercise.system.exercisesystem.services.PostService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -10,6 +11,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @Service
+@Profile("springdatajpa")
 public class PostSDJpaService implements PostService {
 
     private final PostRepository postRepository;
