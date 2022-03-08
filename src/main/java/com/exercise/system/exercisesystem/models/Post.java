@@ -15,10 +15,10 @@ public class Post {
     private String title;
     private String description;
     private LocalDateTime createdDate;
-    @OneToOne(optional = false)
+    @ManyToOne(optional = false)
     @JoinColumn(name = "room", referencedColumnName = "roomId")
     private Room room;
-    @OneToOne(optional = false)
+    @ManyToOne(optional = false)
     @JoinColumn(name = "activeUser", referencedColumnName = "userId")
     private User activeUser;
 
