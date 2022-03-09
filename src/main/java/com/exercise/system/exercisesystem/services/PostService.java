@@ -15,6 +15,6 @@ public class PostService {
     public Optional<Post> findPostById(Long id) { return postRepository.findById(id);}
 
     public Post save(Post post) {
-        return postRepository.saveAndFlush(post);
+        return postRepository.save(post);
     }
 }

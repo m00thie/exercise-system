@@ -18,6 +18,6 @@ public class UserService {
     public Optional<User> findUserById(UUID id) { return userRepository.findById(id);}
 
     public User save(User user) {
-        return userRepository.saveAndFlush(user);
+        return userRepository.save(user);
     }
 }
