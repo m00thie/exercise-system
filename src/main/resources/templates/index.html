@@ -1,0 +1,14 @@
+<html>
+<body>
+<h1>Hello, world!</h1>
+<div>
+    <h2 th:if="${#lists.isEmpty(rooms)}">No rooms yet!</h2>
+    <div th:unless="${#lists.isEmpty(rooms)}">
+        <ul th:each="room : ${rooms}">
+            <li><a th:href="@{/room/{id}(id=${room.roomId})}" th:text="${room.name}"></a></li>
+        </ul>
+    </div>
+    <a th:href="@{/room/create}">Create new room</a>
+</div>
+</body>
+</html>

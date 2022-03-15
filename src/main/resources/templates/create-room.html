@@ -1,0 +1,19 @@
+<html>
+<body>
+<form action="#" th:action="@{/room/create}" th:object="${room}" method="post">
+    <div style="display: flex; flex-direction: column">
+        <div style="display: flex; flex-direction: row">
+            <span style="order: 2">Room name</span>
+            <input style="order: 3" type="text" th:field="*{name}">
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <span style="order: 2">Room description</span>
+            <input style="order: 3" type="text" th:field="*{description}">
+        </div>
+        <div>
+            <input type="submit" value="Create">
+        </div>
+    </div>
+</form>
+</body>
+</html>
