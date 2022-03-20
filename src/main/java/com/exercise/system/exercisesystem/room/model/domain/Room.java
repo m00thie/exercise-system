@@ -1,8 +1,10 @@
-package com.exercise.system.exercisesystem.room.model;
+package com.exercise.system.exercisesystem.room.model.domain;
 
+import com.exercise.system.exercisesystem.post.model.domain.Post;
 import com.exercise.system.exercisesystem.user.model.User;
 import lombok.AccessLevel;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
@@ -27,6 +29,10 @@ public class Room {
     @JoinColumn(name = "updated_by")
     User updatedBy;
     boolean privateRoom;
+    @EqualsAndHashCode.Exclude
+    @OneToMany(mappedBy = "room")
+    Set<Post> posts;
+    @EqualsAndHashCode.Exclude
     @ManyToMany
     @JoinTable(
             name = "private_room_users",

@@ -1,6 +1,6 @@
-package com.exercise.system.exercisesystem.post.model;
+package com.exercise.system.exercisesystem.post.model.domain;
 
-import com.exercise.system.exercisesystem.room.model.Room;
+import com.exercise.system.exercisesystem.room.model.domain.Room;
 import com.exercise.system.exercisesystem.user.model.User;
 import lombok.AccessLevel;
 import lombok.Data;

@@ -2,5 +2,29 @@
 <body>
 <h1 th:text="${room.name}"></h1>
 <p th:text="${room.description}"></p>
+<h2>Posts</h2>
+<div>
+    <h3 th:if="${#lists.isEmpty(posts)}">There is no posts in room yet!</h3>
+    <div style="display: flex; flex-direction: column" th:each="post : ${posts}">
+        <div style="display: flex; flex-direction: inherit">
+            <div style="display:flex; flex-direction: row">
+<!--                <span th:text="'User:  + ${post.author.username}"></span>-->
+                <span th:text="'Created at: ' + ${post.createdAt}"></span>
+            </div>
+            <p th:text="${post.content}"></p>
+        </div>
+    </div>
+</div>
+<span>Write new post</span>
+<form action="#" th:action="@{/room/{roomId}/post/create(roomId=${room.roomId})}" method="post" th:object="${newPost}">
+    <div style="display: flex; flex-direction: column">
+        <div style="display: flex; flex-direction: row">
+            <input style="order: 10" type="text" th:field="*{content}">
+        </div>
+        <div>
+            <input type="submit" value="Add">
+        </div>
+    </div>
+</form>
 </body>
 </html>
