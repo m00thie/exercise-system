@@ -1,7 +1,7 @@
 package com.exercise.system.exercisesystem.post.model.dto;
 
 import com.exercise.system.exercisesystem.post.model.domain.Post;
-import com.exercise.system.exercisesystem.user.model.User;
+import com.exercise.system.exercisesystem.user.model.domain.User;
 
 import java.time.LocalDateTime;
 import java.util.Optional;

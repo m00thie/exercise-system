@@ -1,7 +1,7 @@
 package com.exercise.system.exercisesystem.room.model.domain;
 
 import com.exercise.system.exercisesystem.post.model.domain.Post;
-import com.exercise.system.exercisesystem.user.model.User;
+import com.exercise.system.exercisesystem.user.model.domain.User;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
