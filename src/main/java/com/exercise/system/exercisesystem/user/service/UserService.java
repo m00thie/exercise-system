@@ -9,6 +9,7 @@ import com.exercise.system.exercisesystem.user.model.dto.PermissionDto;
 import com.exercise.system.exercisesystem.user.repository.PermissionRepository;
 import com.exercise.system.exercisesystem.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -23,6 +24,7 @@ public class UserService {
     private final PermissionRepository permissionRepository;
 
     private final DateTimeService dateTimeService;
+    private final PasswordEncoder passwordEncoder;
 
     @PostConstruct
     private void configureSetup() {
@@ -50,7 +52,7 @@ public class UserService {
     private User createUser(CreateUserDto userDto, PermissionName basePermissionName) {
         User newUser = new User();
         newUser.setUsername(userDto.username());
-        newUser.setPassword(userDto.password());
+        newUser.setPassword(passwordEncoder.encode(userDto.password()));
         newUser.setCreatedAt(dateTimeService.getCurrentLocalDate());
 
         Permission basePermission = permissionRepository.findPermissionByName(basePermissionName)

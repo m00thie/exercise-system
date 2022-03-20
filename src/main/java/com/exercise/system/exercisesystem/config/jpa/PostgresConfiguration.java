@@ -8,6 +8,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableJpaRepositories(basePackageClasses = ExerciseSystemApplication.class)
 @EnableTransactionManagement
-public class PostgresConfig {
+public class PostgresConfiguration {
 
 }

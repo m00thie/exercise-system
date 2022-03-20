@@ -15,7 +15,8 @@ import java.util.Set;
 @Table(name = "forum_user", indexes = @Index(columnList = "username", unique = true))
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
+    @SequenceGenerator(name = "user_seq")
     Long userId;
     String username;
     String password;

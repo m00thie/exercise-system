@@ -2,10 +2,11 @@ package com.exercise.system.exercisesystem.room.controller;
 
 import com.exercise.system.exercisesystem.post.model.domain.Post;
 import com.exercise.system.exercisesystem.post.model.dto.PostDto;
-import com.exercise.system.exercisesystem.room.model.dto.RoomDto;
 import com.exercise.system.exercisesystem.room.model.domain.Room;
+import com.exercise.system.exercisesystem.room.model.dto.RoomDto;
 import com.exercise.system.exercisesystem.room.service.RoomService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +17,7 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.Comparator;
 
-
+@Slf4j
 @Controller
 @RequiredArgsConstructor
 public class RoomController {
